@@ -2,3 +2,20 @@
     Recipes
 </h2>
 
+<ul class="recipes-container">
+    <li class="recipe" *ngFor="let recipe of recipes">
+        <button
+            class="recipe-button"
+            (click)="onRecipeClick(recipe)"
+        >
+            {{ recipe.name }}
+        </button>    
+    </li>
+</ul>
+
+<h3> Details </h3>
+<div *ngIf="currRecipe.name">
+    <h4> {{ currRecipe.name }} </h4>
+    <p> {{ currRecipe.description }} </p>
+    <img [src]="currRecipe.imagePath" alt="{{ currRecipe.name }}">
+</div>

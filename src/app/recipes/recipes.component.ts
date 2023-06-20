@@ -27,4 +27,15 @@ export class RecipesComponent {
     }
   ];
   
+  currRecipe: Recipe = {
+    name: '',
+    description: '',
+    imagePath: ''
+  };
+
+  onRecipeClick(recipe: Recipe) {
+    this.currRecipe = recipe;
+  }
+  
+
 }
